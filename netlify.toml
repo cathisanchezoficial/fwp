@@ -1,0 +1,11 @@
+[build]
+  command = "zip -s 0 fwp-netlify.zip --out fwp-source.zip && unzip -q fwp-source.zip -d site && cd site && npm install && npm run build"
+  publish = "site/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
