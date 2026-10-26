@@ -13,3 +13,9 @@
 [functions]
   node_bundler = "esbuild"
   directory = "site/netlify/functions"
+
+[functions."process-payment-emails"]
+  schedule = "*/15 * * * *"
+
+[functions."send-confirmation-preview"]
+  schedule = "@yearly"
